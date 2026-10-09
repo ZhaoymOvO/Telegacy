@@ -1,0 +1,48 @@
+# Visual C++ 6.0 User & Workspace Files
+*.ncb
+*.opt
+*.plg
+*.aps
+*.clw
+
+# Build Outputs & Intermediate Directories
+Debug/
+Release/
+[Dd]ebug/
+[Rr]elease/
+
+# Intermediate Object & Compiler/Linker Files
+*.obj
+*.sbr
+*.bsc
+*.idb
+*.pdb
+*.ilk
+*.map
+*.pch
+*.res
+*.exp
+
+# Compiled Binaries
+*.exe
+
+# Visual Studio (Modern)
+.vs/
+*.suo
+*.user
+*.useros_guid
+*.sln.docstates
+
+# Temporary, Logs & Crash Dumps
+tmp/
+*.log
+*.bak
+*.dmp
+*.mdmp
+
+# Operating System & Editor Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

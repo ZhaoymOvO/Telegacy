@@ -484,7 +484,15 @@ int folder_handler(BYTE* unenc_response, ChatsFolder* folder, int i, bool update
 			j--;
 		}
 	}
-	std::sort(peers_temp.begin() + folder->pinned_count, peers_temp.begin() + folder->count);
+	if (folder->count < 0) {
+		folder->count = 0;
+	}
+	if (folder->pinned_count > folder->count) {
+		folder->pinned_count = folder->count;
+	}
+	if (folder->pinned_count < folder->count) {
+		std::sort(peers_temp.begin() + folder->pinned_count, peers_temp.begin() + folder->count);
+	}
 	if (update) {
 		free(folder->peers);
 		if (folder == current_folder) SendMessage(hComboBoxChats, CB_RESETCONTENT, 0, 0);
